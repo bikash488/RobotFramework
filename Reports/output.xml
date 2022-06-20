@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220620 12:56:15.032" rpa="false" schemaversion="3">
+<suite id="s1" name="FlightBooking" source="C:\Users\HP\PycharmProjects\PwcProject\Tests\FlightBooking.robot">
+<test id="s1-t1" name="TC_001 Book flight tickets on Makemytrip Application" line="10">
+<kw name="open browser and maximize window" library="HomePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220620 12:56:16.387" level="INFO">Opening browser 'Chrome' to base url 'https://www.makemytrip.com/flights/'.</msg>
+<status status="PASS" starttime="20220620 12:56:16.387" endtime="20220620 12:56:20.835"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220620 12:56:20.835" endtime="20220620 12:56:20.963"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:20.963" endtime="20220620 12:56:21.040"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220620 12:56:21.050" level="INFO">Current page contains element 'xpath://a[@class="mmtLogo makeFlex"]'.</msg>
+<status status="PASS" starttime="20220620 12:56:21.040" endtime="20220620 12:56:21.050"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:16.387" endtime="20220620 12:56:21.050"/>
+</kw>
+<kw name="Enter Value in from Field" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FromCity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:21.052" endtime="20220620 12:56:21.084"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FromCity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:21.084" level="INFO">Clicking element 'id:fromCity'.</msg>
+<status status="PASS" starttime="20220620 12:56:21.084" endtime="20220620 12:56:21.354"/>
+</kw>
+<kw name="Verify Field and Enter Value" library="HomePage">
+<arg>${FromCitySearch}</arg>
+<arg>Kolkata</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:21.354" endtime="20220620 12:56:21.836"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:21.836" level="INFO">Typing text 'Kolkata' into text field 'xpath://input[@placeholder='From']'.</msg>
+<status status="PASS" starttime="20220620 12:56:21.836" endtime="20220620 12:56:21.981"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:21.354" endtime="20220620 12:56:21.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${pageDownCity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:21.981" endtime="20220620 12:56:22.020"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pageDownCity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:22.020" level="INFO">Clicking element 'xpath://li[@id='react-autowhatever-1-section-0-item-0']//div[@class='calc60']'.</msg>
+<status status="PASS" starttime="20220620 12:56:22.020" endtime="20220620 12:56:22.196"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:21.050" endtime="20220620 12:56:22.198"/>
+</kw>
+<kw name="Choose on Travellers" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${travellers}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:22.198" endtime="20220620 12:56:22.233"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${travellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:22.233" level="INFO">Clicking element 'xpath://span[@class='lbl_input latoBold appendBottom5']'.</msg>
+<status status="PASS" starttime="20220620 12:56:22.233" endtime="20220620 12:56:22.388"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[@id='root']/div[@class='bgGradient webpSupport']/div[@class='minContainer']/div/div[contains(@class,'widgetSection appendBottom40 primaryTraveler')]/div[@class='fsw widgetOpen']/div[@class='fsw_inner returnPersuasion']/div[@class='fsw_inputBox flightTravllers inactiveWidget activeWidget']/div[@class='travellers gbTravellers']/div[@class='appendBottom20']/ul[@class='guestCounter font12 darkText gbCounter']/li[${TravellerNo}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:22.388" level="INFO">Clicking element '//body/div[@id='root']/div[@class='bgGradient webpSupport']/div[@class='minContainer']/div/div[contains(@class,'widgetSection appendBottom40 primaryTraveler')]/div[@class='fsw widgetOpen']/div[@class='fsw_inner returnPersuasion']/div[@class='fsw_inputBox flightTravllers inactiveWidget activeWidget']/div[@class='travellers gbTravellers']/div[@class='appendBottom20']/ul[@class='guestCounter font12 darkText gbCounter']/li[2]'.</msg>
+<status status="PASS" starttime="20220620 12:56:22.388" endtime="20220620 12:56:22.510"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ApplyButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:22.510" level="INFO">Clicking button 'xpath://button[normalize-space()='APPLY']'.</msg>
+<status status="PASS" starttime="20220620 12:56:22.510" endtime="20220620 12:56:22.665"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:22.198" endtime="20220620 12:56:22.665"/>
+</kw>
+<kw name="Click on Search button" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SearchButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:56:22.665" endtime="20220620 12:56:22.704"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${SearchButton}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:22.704" level="INFO">Double clicking element 'xpath://p[@data-cy='submit']/a'.</msg>
+<status status="PASS" starttime="20220620 12:56:22.704" endtime="20220620 12:56:23.032"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:22.665" endtime="20220620 12:56:23.032"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@class='primaryBtn font24 latoBold widgetSearchBtn ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:56:23.034" level="INFO">Clicking element 'xpath://a[@class='primaryBtn font24 latoBold widgetSearchBtn ']'.</msg>
+<msg timestamp="20220620 12:56:24.389" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220620 12:56:24.389" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="primaryBtn font24 latoBold widget...Btn "&gt;Search&lt;/a&gt; is not clickable at point (631, 439). Other element would receive the click: &lt;div class="makeFlex column appendLeft20"&gt;...&lt;/div&gt;
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0077D953+2414931]
+	Ordinal0 [0x0070F5E1+1963489]
+	Ordinal0 [0x005FC6B8+837304]
+	Ordinal0 [0x0062FC27+1047591]
+	Ordinal0 [0x0062DC08+1039368]
+	Ordinal0 [0x0062B90B+1030411]
+	Ordinal0 [0x0062A659+1025625]
+	Ordinal0 [0x00620293+983699]
+	Ordinal0 [0x0064449C+1131676]
+	Ordinal0 [0x0061FC74+982132]
+	Ordinal0 [0x006446B4+1132212]
+	Ordinal0 [0x00654812+1198098]
+	Ordinal0 [0x006442B6+1131190]
+	Ordinal0 [0x0061E860+976992]
+	Ordinal0 [0x0061F756+980822]
+	GetHandleVerifier [0x009ECC62+2510274]
+	GetHandleVerifier [0x009DF760+2455744]
+	GetHandleVerifier [0x0080EABA+551962]
+	GetHandleVerifier [0x0080D916+547446]
+	Ordinal0 [0x00715F3B+1990459]
+	Ordinal0 [0x0071A898+2009240]
+	Ordinal0 [0x0071A985+2009477]
+	Ordinal0 [0x00723AD1+2046673]
+	BaseThreadInitThunk [0x75DB6739+25]
+	RtlGetFullPathName_UEx [0x770B8FEF+1215]
+	RtlGetFullPathName_UEx [0x770B8FBD+1165]
+</msg>
+<status status="FAIL" starttime="20220620 12:56:23.032" endtime="20220620 12:56:24.410"/>
+</kw>
+<kw name="close all browsers" library="HomePage" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220620 12:56:24.410" endtime="20220620 12:56:26.648"/>
+</kw>
+<status status="PASS" starttime="20220620 12:56:24.410" endtime="20220620 12:56:26.648"/>
+</kw>
+<status status="FAIL" starttime="20220620 12:56:16.387" endtime="20220620 12:56:26.648">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="primaryBtn font24 latoBold widget...Btn "&gt;Search&lt;/a&gt; is not clickable at point (631, 439). Other element would receive the click: &lt;div class="makeFlex column appendLeft20"&gt;...&lt;/div&gt;
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0077D953+2414931]
+	Ordinal0 [0x0070F5E1+1963489]
+	Ordinal0 [0x005FC6B8+837304]
+	Ordinal0 [0x0062FC27+1047591]
+	Ordinal0 [0x0062DC08+1039368]
+	Ordinal0 [0x0062B90B+1030411]
+	Ordinal0 [0x0062A659+1025625]
+	Ordinal0 [0x00620293+983699]
+	Ordinal0 [0x0064449C+1131676]
+	Ordinal0 [0x0061FC74+982132]
+	Ordinal0 [0x006446B4+1132212]
+	Ordinal0 [0x00654812+1198098]
+	Ordinal0 [0x006442B6+1131190]
+	Ordinal0 [0x0061E860+976992]
+	Ordinal0 [0x0061F756+980822]
+	GetHandleVerifier [0x009ECC62+2510274]
+	GetHandleVerifier [0x009DF760+2455744]
+	GetHandleVerifier [0x0080EABA+551962]
+	GetHandleVerifier [0x0080D916+547446]
+	Ordinal0 [0x00715F3B+1990459]
+	Ordinal0 [0x0071A898+2009240]
+	Ordinal0 [0x0071A985+2009477]
+	Ordinal0 [0x00723AD1+2046673]
+	BaseThreadInitThunk [0x75DB6739+25]
+	RtlGetFullPathName_UEx [0x770B8FEF+1215]
+	RtlGetFullPathName_UEx [0x770B8FBD+1165]
+</status>
+</test>
+<status status="FAIL" starttime="20220620 12:56:15.032" endtime="20220620 12:56:26.651"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="FlightBooking">FlightBooking</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

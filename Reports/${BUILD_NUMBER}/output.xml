@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220620 12:26:33.264" rpa="false" schemaversion="3">
+<suite id="s1" name="FlightBooking" source="C:\Users\HP\PycharmProjects\PwcProject\Tests\FlightBooking.robot">
+<test id="s1-t1" name="TC_001 Book flight tickets on Makemytrip Application" line="9">
+<kw name="open browser and maximize window" library="HomePage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220620 12:26:39.321" level="INFO">Opening browser 'Chrome' to base url 'https://www.makemytrip.com/flights/'.</msg>
+<status status="PASS" starttime="20220620 12:26:39.321" endtime="20220620 12:26:45.143"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220620 12:26:45.143" endtime="20220620 12:26:45.261"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:26:45.261" endtime="20220620 12:26:45.292"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220620 12:26:45.300" level="INFO">Current page contains element 'xpath://a[@class="mmtLogo makeFlex"]'.</msg>
+<status status="PASS" starttime="20220620 12:26:45.292" endtime="20220620 12:26:45.300"/>
+</kw>
+<status status="PASS" starttime="20220620 12:26:39.321" endtime="20220620 12:26:45.300"/>
+</kw>
+<kw name="Choose on Travellers" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${travellers}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:26:45.308" endtime="20220620 12:26:45.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${travellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:26:45.341" level="INFO">Clicking element 'xpath://span[@class='lbl_input latoBold appendBottom5']'.</msg>
+<status status="PASS" starttime="20220620 12:26:45.336" endtime="20220620 12:26:45.578"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[@id='root']/div[@class='bgGradient webpSupport']/div[@class='minContainer']/div/div[contains(@class,'widgetSection appendBottom40 primaryTraveler')]/div[@class='fsw widgetOpen']/div[@class='fsw_inner returnPersuasion']/div[@class='fsw_inputBox flightTravllers inactiveWidget activeWidget']/div[@class='travellers gbTravellers']/div[@class='appendBottom20']/ul[@class='guestCounter font12 darkText gbCounter']/li[${TravellerNo}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:26:45.579" level="INFO">Clicking element '//body/div[@id='root']/div[@class='bgGradient webpSupport']/div[@class='minContainer']/div/div[contains(@class,'widgetSection appendBottom40 primaryTraveler')]/div[@class='fsw widgetOpen']/div[@class='fsw_inner returnPersuasion']/div[@class='fsw_inputBox flightTravllers inactiveWidget activeWidget']/div[@class='travellers gbTravellers']/div[@class='appendBottom20']/ul[@class='guestCounter font12 darkText gbCounter']/li[2]'.</msg>
+<status status="PASS" starttime="20220620 12:26:45.579" endtime="20220620 12:26:45.725"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ApplyButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220620 12:26:45.725" level="INFO">Clicking button 'xpath://button[normalize-space()='APPLY']'.</msg>
+<status status="PASS" starttime="20220620 12:26:45.725" endtime="20220620 12:26:45.862"/>
+</kw>
+<status status="PASS" starttime="20220620 12:26:45.300" endtime="20220620 12:26:45.862"/>
+</kw>
+<kw name="Click on Search button" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SearchButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220620 12:26:45.862" endtime="20220620 12:26:45.900"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${SearchButton}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20220620 12:26:45.900" level="INFO">Double clicking element 'xpath://p[@data-cy='submit']/a'.</msg>
+<status status="PASS" starttime="20220620 12:26:45.900" endtime="20220620 12:26:52.669"/>
+</kw>
+<status status="PASS" starttime="20220620 12:26:45.862" endtime="20220620 12:26:52.669"/>
+</kw>
+<status status="PASS" starttime="20220620 12:26:39.321" endtime="20220620 12:26:52.669"/>
+</test>
+<status status="PASS" starttime="20220620 12:26:33.272" endtime="20220620 12:26:52.675"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FlightBooking">FlightBooking</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
